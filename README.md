@@ -30,6 +30,18 @@ El proyecto consiste en una interfaz de chat simple con tres secciones: Emisor, 
 
 ![Uso Encripta-Xor](./DemoEncripta-Xor.gif)
 
+## 🌐 Uso de Live Server
+
+Para ejecutar la aplicación correctamente, no basta con abrir `index.html` directamente en el navegador. Esto se debe a que algunas funcionalidades, como la carga de módulos y la manipulación del DOM, requieren que la aplicación se sirva desde un servidor web.
+
+Para ello, recomendamos utilizar la extensión **Live Server** de Visual Studio Code. Sigue estos pasos:
+
+1. Instala la extensión **Live Server** desde el marketplace de Visual Studio Code.
+2. Abre el proyecto en Visual Studio Code.
+3. Haz clic derecho en `index.html` y selecciona "Open with Live Server".
+
+Esto iniciará un servidor local y abrirá la aplicación en tu navegador, permitiendo que todas las funcionalidades trabajen correctamente.
+
 ## 🗂️ Estructura del Proyecto
 
 - index.html: Contiene la estructura HTML de la interfaz de usuario.
