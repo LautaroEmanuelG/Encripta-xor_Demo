@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='main.css'>
+    <title>Enc.RYP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src='algoritmo.js'></script>
+</head>
+
+<body>
+
+    <h2>Enc.RYP</h2>
+
+    <div class="container">
+        <!-- Bloque 1 -->
+        <div class="block">
+            <label for="">Emisor</label><br>
+            <textarea id="mensaje1" class="message-box" readonly></textarea><br>
+            <input type="text" id="input1" class="input-box" placeholder="Escribe un mensaje..."><br>
+            <button id="enviar1" class="btn-send">Enviar →</button>
+        </div>
+
+        <!-- Interceptador -->
+        <div>
+            <label for="">Mensaje interceptado</label><br>
+            <textarea id="interceptador" class="intercept-box" readonly></textarea>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="block">
+            <label for="">Receptor</label><br>
+            <textarea id="mensaje2" class="message-box" readonly></textarea><br>
+            <input type="text" id="input2" class="input-box" placeholder="Escribe un mensaje..."><br>
+            <button id="enviar2" class="btn-send">Enviar →</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('#enviar1').on("click", function (e) {
+                interceptarYEnviar('input1', 'mensaje2', 'mensaje1');
+            });
+
+            $('#enviar2').on("click", function (e) {
+                interceptarYEnviar('input2', 'mensaje1', 'mensaje2');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
