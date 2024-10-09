@@ -28,6 +28,8 @@ npx webpack
 
 El proyecto consiste en una interfaz de chat simple con tres secciones: Emisor, Interceptador y Receptor. Los mensajes enviados desde el Emisor son encriptados utilizando una palabra clave y luego mostrados en el Interceptador. El Receptor desencripta los mensajes y los muestra en su sección.
 
+![Uso Encripta-Xor](./DemoEncripta-Xor.gif)
+
 ## 🗂️ Estructura del Proyecto
 
 - index.html: Contiene la estructura HTML de la interfaz de usuario.
