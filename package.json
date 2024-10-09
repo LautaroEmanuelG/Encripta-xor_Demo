@@ -1,0 +1,20 @@
+{
+  "name": "encripta-xor_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "algoritmo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "encripta-xor": "^0.1.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

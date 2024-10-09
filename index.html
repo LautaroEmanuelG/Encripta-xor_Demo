@@ -5,52 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='main.css'>
-    <title>Enc.RYP</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src='algoritmo.js'></script>
+    <title>Demo Npm Encript-Xor</title>
+    <script type="module" src="./dist/algoritmo.js"></script>
 </head>
 
 <body>
-
-    <h2>Enc.RYP</h2>
-
+    <h1>Demo Npm Encript-Xor</h1>
+    <button id="toggle-dark-mode" class="btn-dark"></button>
     <div class="container">
         <!-- Bloque 1 -->
-        <div class="block">
-            <label for="">Emisor</label><br>
-            <textarea id="mensaje1" class="message-box" readonly></textarea><br>
-            <input type="text" id="input1" class="input-box" placeholder="Escribe un mensaje..."><br>
-            <button id="enviar1" class="btn-send">Enviar →</button>
+        <div class="chat-window block" id="chatA">
+            <div class="chat-header">
+                <h2>🔒 Emisor</h2>
+            </div>
+            <div class="chat-messages" id="mensaje1"></div>
+            <div class="chat-input">
+                <input type="text" id="input1" placeholder="Escribe un mensaje...">
+                <button id="enviar1" class="btn-send">Enviar</button>
+            </div>
         </div>
 
         <!-- Interceptador -->
-        <div>
-            <label for="">Mensaje interceptado</label><br>
-            <textarea id="interceptador" class="intercept-box" readonly></textarea>
+        <div class="chat-window block" id="intercepted">
+            <div class="chat-header">
+                <h2>🛡️ Mensaje interceptado</h2>
+            </div>
+            <div class="chat-messages" id="interceptador"></div>
         </div>
 
         <!-- Bloque 2 -->
-        <div class="block">
-            <label for="">Receptor</label><br>
-            <textarea id="mensaje2" class="message-box" readonly></textarea><br>
-            <input type="text" id="input2" class="input-box" placeholder="Escribe un mensaje..."><br>
-            <button id="enviar2" class="btn-send">Enviar →</button>
+        <div class="chat-window block" id="chatB">
+            <div class="chat-header">
+                <h2>🔓 Receptor</h2>
+            </div>
+            <div class="chat-messages" id="mensaje2"></div>
+            <div class="chat-input">
+                <input type="text" id="input2" placeholder="Escribe un mensaje...">
+                <button id="enviar2" class="btn-send">Enviar</button>
+            </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        $(function () {
-
-            $('#enviar1').on("click", function (e) {
-                interceptarYEnviar('input1', 'mensaje2', 'mensaje1');
-            });
-
-            $('#enviar2').on("click", function (e) {
-                interceptarYEnviar('input2', 'mensaje1', 'mensaje2');
-            });
-        });
-    </script>
-
 </body>
 
 </html>
