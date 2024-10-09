@@ -114,6 +114,8 @@ body.dark-mode .btn-dark::after {
     border-radius: 4px;
     background-color: var(--block-bg-color);
     color: var(--text-color);
+    font-size: medium;
+    font-weight: 600;
 }
 
 .chat-input input[type="text"]:focus {
